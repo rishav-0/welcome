@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Services Proposal - Nipur Baishya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --muted: #9aa4b2;
+            --accent1: #7c3aed;
+            --accent2: #06b6d4;
+            --glass: rgba(255, 255, 255, 0.04);
+            --radius: 16px;
+            --maxw: 920px;
+            --shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background: linear-gradient(180deg, #071029 0%, #071523 60%), var(--bg);
+            color: #e6eef6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .wrap {
+            max-width: var(--maxw);
+            margin: 36px auto;
+            padding: 28px;
+            border-radius: 20px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            overflow: hidden;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 28px;
+        }
+
+        .logo {
+
+            /* background: linear-gradient(135deg, var(--accent1), var(--accent2)); */
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 20px;
+            box-shadow: 0 6px 20px rgba(124, 58, 237, 0.18);
+        }
+
+        .brand {
+            line-height: 1;
+        }
+
+        .brand h1 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .brand p {
+            margin: 0;
+            margin-top: 4px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .client-header {
+            background: linear-gradient(90deg, rgba(124, 58, 237, 0.08), rgba(6, 182, 212, 0.04));
+            border: 1px solid rgba(124, 58, 237, 0.08);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .client-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #0ea5a4, #7c3aed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .client-info h2 {
+            margin: 0 0 4px 0;
+            font-size: 18px;
+            color: #eaf2ff;
+        }
+
+        .client-info p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            padding: 20px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            box-shadow: 0 6px 18px rgba(2, 6, 23, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            margin: 0 0 16px 0;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .service-grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .service-item {
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: all 0.2s ease;
+        }
+
+        .service-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+            transform: translateY(-1px);
+        }
+
+        .service-item h3 {
+            margin: 0 0 8px 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: #dcecff;
+        }
+
+        .service-item p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .highlight {
+            background: linear-gradient(90deg, rgba(124, 58, 237, 0.15), rgba(6, 182, 212, 0.08));
+            color: #a78bfa;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .extra-badge {
+            background: linear-gradient(90deg, #ef4444, #dc2626);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 12px;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+        }
+
+        .responsibility-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .responsibility-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .responsibility-icon {
+            width: 8px;
+            height: 8px;
+            background: var(--accent2);
+            border-radius: 50%;
+            margin-top: 6px;
+            flex-shrink: 0;
+        }
+
+        .responsibility-content h4 {
+            margin: 0 0 4px 0;
+            font-size: 14px;
+            font-weight: 600;
+            color: #dcecff;
+        }
+
+        .responsibility-content p {
+            margin: 0;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .pricing-section {
+            background: linear-gradient(135deg, var(--accent1), var(--accent2));
+            padding: 32px;
+            border-radius: 16px;
+            margin: 24px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            opacity: 0.3;
+        }
+
+        .pricing-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .price-label {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+
+        .price-description {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .timeline-section {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .timeline-label {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .timeline-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .timeline-description {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center;
+        }
+
+        .footer-message {
+            font-size: 16px;
+            font-weight: 600;
+            color: #dcecff;
+            margin-bottom: 8px;
+        }
+
+        .footer-sub {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .meta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .pill {
+            background: var(--glass);
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-weight: 600;
+            color: #dcecff;
+            font-size: 13px;
+            border: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        @media (max-width: 768px) {
+            .wrap {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .meta {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="logo w-[150px] flex items-center px-3 py-2 justify-center rounded-full">
+                <img class="w-full object-contain" src="./logo.png" alt="">
+            </div>
+            <!-- <div class="brand">
+                <h1>CINZMEDIA</h1>
+                <p>All in One Digital Marketing Solutions</p>
+            </div> -->
+        </header>
+
+        <div class="welcome-bg text-lg font-bold mb-6" style="
+            background: linear-gradient(90deg, rgba(124,58,237,0.18), rgba(6,182,212,0.12));
+            border-radius: 18px;
+            padding: 10px 0;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 24px rgba(124,58,237,0.10);
+            border: 1px solid rgba(124,58,237,0.10);
+            text-align: center;
+            letter-spacing: 1px;
+            color: #e6eef6;
+            backdrop-filter: blur(2px);
+        ">Welcome to <span style="color: var(--accent1); font-weight: 900; letter-spacing: 2px;">Cinzmedia</span></div>
+
+        <div class="client-header">
+            <div class="client-avatar">NB</div>
+            <div class="client-info">
+                <h2>Digital Marketing Proposal</h2>
+                <p>Prepared exclusively for Nipur Baishya</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="">🚀 Complete Service Package</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3>Spotify Website Management & Enhancement</h3>
+                    <p>Complete management and optimization of your Spotify presence to maximize reach and engagement
+                        across the platform.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Custom Website Development</h3>
+                    <p>Professional website creation with modern homepage design and comprehensive product listings.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Digital Advertising Management</h3>
+                    <p>Strategic ad campaign creation and management across platforms. <span class="highlight">Ad spend
+                            by client</span></p>
+                </div>
+                <div class="service-item">
+                    <h3>Social Media Management</h3>
+                    <p>Complete social media strategy, content creation, and community management across all platforms.
+                    </p>
+                </div>
+                <div class="service-item">
+                    <h3>Multi-Platform Account Management</h3>
+                    <p>Professional management of all your social and commercial accounts for consistent brand presence.
+                    </p>
+                </div>
+                <div class="service-item">
+                    <h3>Brand Identity & Logo Design</h3>
+                    <p>Creation of professional brand logo and comprehensive brand name strategy for market identity.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>⚡ Additional Services <span class="extra-badge">Extra Charges</span></h2>
+            <div class="service-item">
+                <h3>Platform Maintenance Services</h3>
+                <p>Ongoing maintenance and optimization for every digital platform based on specific work requirements.
+                    Charges vary depending on scope and complexity.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📋 Client Responsibilities</h2>
+            <div class="responsibility-grid">
+                <div class="responsibility-item">
+                    <div class="responsibility-icon"></div>
+                    <div class="responsibility-content">
+                        <h4>Domain & Hosting Costs</h4>
+                        <p>Client handles all domain registration and web hosting expenses</p>
+                    </div>
+                </div>
+                <div class="responsibility-item">
+                    <div class="responsibility-icon"></div>
+                    <div class="responsibility-content">
+                        <h4>Advertising Budget</h4>
+                        <p>Client provides budget for all paid advertising campaigns across platforms</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pricing-section">
+            <div class="pricing-content">
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="price-label">Base Package</div>
+                        <div class="price">₹15,000</div>
+                        <div class="price-description">Complete setup and development</div>
+                    </div>
+
+                </div>
+                <div class="timeline-section">
+                    <div class="timeline-label">Project Timeline</div>
+                    <div class="timeline-value">5 Days</div>
+                    <div class="timeline-description">Website and Shopify setup completion</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="meta">
+                <div class="pill">✨ Premium service quality</div>
+                <div class="pill">📱 24/7 support included</div>
+                <div class="pill">🎯 Results-driven approach</div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-message">Ready to Transform Your Digital Presence?</div>
+            <div class="footer-sub">Let's build something exceptional together with Cinzmedia</div>
+        </footer>
+    </div>
+</body>
+
+</html>
